@@ -2,9 +2,9 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
         <div class="modal" :class="{ sale: theme === 'sale' }">
-            <slot>Default Content</slot>
-            <div class="actions">
-                <slot name="links"></slot>
+            <slot>Default Content For Modal 2</slot>
+            <div class="buttons">
+                <slot name="buttons"></slot>
             </div>
         </div>
     </div>
@@ -70,6 +70,21 @@
 
     .modal.sale .actions a {
         color: white;
+    }
+
+    .modal form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 8rem;
+        margin: 0 auto;
+        text-align: left;
+        width: 60%;
+    }
+
+    form label{
+        display: block;
     }
     
 </style>
